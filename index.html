@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reto Biblico</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container-icon">
+        <img src="/img/bible-12509_512.gif" alt=""><br>
+    </div>
+    <div class="container-header">
+        <h1>Reto Biblico</h1><br>
+        <p>Bienvenido al Reto Biblico, aquí encontrarás preguntas y respuestas sobre la Biblia.
+            Por cada respuesta correcta, avanzarás de nivel.</p><br>
+        <p>¡Buena suerte!</p><br><br>
+        <button class="start-button">Comenzar</button>
+    </div>
+    <div class="container-instructions">
+        <button class="openDialog">Instrucciones</button>
+    </div>
+    <div class="container-dialog">
+        <dialog class="myDialog" closedby="any">
+            <!--Poniendo closedby en any podemos salir del Modal dandole en la pantalla -->
+            <h2>¿Como Jugar?</h2><br>
+            <h3>1. Inicio del juego</h3>
+            <p>Al comenzar, se te presentará una pregunta sobre algún pasaje, personaje, libro o enseñanza de la Biblia.</p><br>
+            <h3>2. Opciones múltiples</h3>
+            <p>Cada pregunta tendrá 4 posibles respuestas. Solo una es correcta.</p><br>
+            <h3>3. Selecciona una respuesta</h3>
+            <p>Haz clic en la opción que creas correcta. Cada nivel tiene su tiempo.</p><br>
+            <h3>4. Respuesta correcta = Avanzas</h3>
+            <p>Si tu respuesta es correcta, pasarás automáticamente al siguiente nivel con una nueva pregunta.</p><br>
+            <h3>5. Respuesta incorrecta = Inténtalo de nuevo</h3>
+            <p>Si fallas, se reinicia el juego.</p><br>
+            <h3>6. Niveles</h3>
+            <p>El juego está dividido en niveles. A medida que avances, las preguntas se volverán un poco más difíciles.</p><br>
+            <h3>7. Progreso Espiritual</h3>
+            <p>Cada cierto número de niveles desbloquearás logros espirituales, como:
+                <br>📖 Estudiante de la Palabra
+                <br>🛡️ Guerrero de la Fe
+                <br>👑 Sabio del Reino</p><br>
+            <form method="dialog">
+                <button>Cerrar</button>
+            </form>
+        </dialog>
+    </div>
+
+    <div class="container-footer">
+        <p class="footer-text">Desarrollado por: <a href="https://github.com/tatoguvaga/Reto_Biblico" target="_blank"><strong>Gustavo Varelas</strong></a> <strong>Proverbios 3:13 (RVR1960)</strong> “Bienaventurado el hombre que halla la sabiduría,
+Y que obtiene la inteligencia;”</p>
+    </div>
+
+    <script>
+        const dialog = document.querySelector('.myDialog');
+        document.querySelector('.openDialog').onclick = () => dialog.showModal();
+    </script>
+</body>
+
+</html>
