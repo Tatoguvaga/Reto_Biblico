@@ -29,7 +29,6 @@ body {
 .container-icon img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ajusta la imagen al contenedor */
     border: none;
     border-radius: 50%;
 }
