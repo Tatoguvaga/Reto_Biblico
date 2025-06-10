@@ -61,6 +61,14 @@ button:hover {
     color: #fff;
 }
 
+.start-button a {
+    color: black;
+}
+
+.start-button a:hover {
+    color: white;
+}
+
 /* Botón para abrir el diálogo */
 .openDialog {
     font-size: 18px;

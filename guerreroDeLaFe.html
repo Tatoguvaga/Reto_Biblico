@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guerrero de la Fé</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+        .container-pregunta {
+            background: #a23004;
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .opciones {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .opciones button {
+            width: 400px;
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .correcta {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .incorrecta {
+            background-color: #f44336;
+            color: white;
+        }
+
+        #modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+
+        #modalContent {
+            background: white;
+            color: black;
+            padding: 30px;
+            border-radius: 10px;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .modal-correcto {
+            color: green;
+        }
+
+        .modal-incorrecto {
+            color: red;
+        }
+
+        .barra-progreso {
+            margin: 20px auto;
+            width: 80%;
+            background-color: #ddd;
+            border-radius: 20px;
+            overflow: hidden;
+            height: 20px;
+        }
+
+        .barra-llenado {
+            height: 100%;
+            background-color: #4CAF50;
+            width: 0%;
+            transition: width 0.5s ease-in-out;
+        }
+
+        .nivel-texto {
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Guerrero de la Fe 🛡️</h1><br>
+
+    <div class="container-pregunta">
+        <h2 id="pregunta"></h2>
+        <div class="opciones" id="opciones"></div>
+    </div><br>
+
+    <div class="nivel-texto" id="nivelTexto">Nivel 1 de 10</div>
+    <div class="barra-progreso">
+        <div class="barra-llenado" id="barra"></div>
+    </div>
+
+    <div id="modal">
+        <div id="modalContent"></div>
+    </div>
+
+    <button id="btnSiguienteNivel" style="display: none;" onclick="irAlSiguienteNivel()">Siguiente Nivel</button>
+
+    <script>
+        const preguntas = [
+            { pregunta: "¿Qué rey construyó el primer templo en Jerusalén?", opciones: ["A. David", "B. Salomón", "C. Ezequías", "D. Josías"], correcta: 1 },
+            { pregunta: "¿Qué rey construyó el primer templo en Jerusalén?", opciones: ["A. David", "B. Salomón", "C. Ezequías", "D. Josías"], correcta: 1 },
+            { pregunta: "¿Qué profeta desafió a los profetas de Baal?", opciones: ["A. Elías", "B. Eliseo", "C. Isaías", "D. Jeremías"], correcta: 0 },
+            { pregunta: "¿Qué hizo Jesús en la boda de Caná?", opciones: ["A. Sanó a un enfermo", "B. Resucitó a un muerto", "C. Multiplicó el vino", "D. Caminó sobre el agua"], correcta: 2 },
+
+        ];
+
+        function irAlSiguienteNivel() {
+            window.location.href = "/sabioDelReino.html"; 
+        }
+        </script>
+        <script src="main.js"></script>
+        
+</body>
+
+</html>
