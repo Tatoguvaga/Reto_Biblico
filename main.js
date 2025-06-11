@@ -5,7 +5,7 @@ let nivelActual = 1;
 
 function cargarPregunta() {
     if (nivelActual > 10 || preguntasRestantes.length === 0) {
-        document.getElementById("pregunta").textContent = "🎉 ¡Felicidades! Has completado el primer nivel.";
+        document.getElementById("pregunta").textContent = "🎉 ¡Felicidades! Has completado el nivel y has desbloqueado un nuevo logro espiritual.";
         document.getElementById("opciones").innerHTML = "";
         document.getElementById("btnSiguienteNivel").style.display = "inline-block";
         return;

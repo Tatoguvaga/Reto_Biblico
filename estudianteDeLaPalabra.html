@@ -7,95 +7,6 @@
     <title>Estudiante de la Palabra</title>
     <link rel="stylesheet" href="style.css" />
 
-    <style>
-        .container-pregunta {
-            background: #a23004;
-            color: white;
-            padding: 30px;
-            border-radius: 12px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .opciones {
-            margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .opciones button {
-            width: 400px;
-            display: block;
-            margin: 10px auto;
-            padding: 10px 20px;
-            font-size: 18px;
-            border-radius: 8px;
-            border: none;
-            cursor: pointer;
-        }
-
-        .correcta {
-            background-color: #4CAF50;
-            color: white;
-        }
-
-        .incorrecta {
-            background-color: #f44336;
-            color: white;
-        }
-
-        #modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-            z-index: 999;
-        }
-
-        #modalContent {
-            background: white;
-            color: black;
-            padding: 30px;
-            border-radius: 10px;
-            font-size: 32px;
-            font-weight: bold;
-        }
-
-        .modal-correcto {
-            color: green;
-        }
-
-        .modal-incorrecto {
-            color: red;
-        }
-
-        .barra-progreso {
-            margin: 20px auto;
-            width: 80%;
-            background-color: #ddd;
-            border-radius: 20px;
-            overflow: hidden;
-            height: 20px;
-        }
-
-        .barra-llenado {
-            height: 100%;
-            background-color: #4CAF50;
-            width: 0%;
-            transition: width 0.5s ease-in-out;
-        }
-
-        .nivel-texto {
-            margin-bottom: 10px;
-            font-size: 18px;
-            color: #333;
-        }
-    </style>
 </head>
 
 <body>
@@ -149,7 +60,9 @@
             { pregunta: "¿Quién era el amigo que Jesús resucitó?", opciones: ["A. Pedro", "B. Juan", "C. Lázaro", "D. Tomás"], correcta: 2 },
             { pregunta: "¿Que hizo Dios en el septimo día de la creación?", opciones: ["A. Creó al hombre", "B. Descansó", "C. Creó a los animales", "D. Creó las plantas"], correcta: 1 },
             { pregunta: "¿Quién recibio los diez mandamientos?", opciones: ["A. Abraham", "B. Moisés", "C. David", "D. Salomón"], correcta: 1 },
-            { pregunta: "¿Cómo se llama el gigante que pelio con David?", opciones: ["A. Goliat", "B. Sansón", "C. Saúl", "D. Filisteo"], correcta: 0 }
+            { pregunta: "¿Cómo se llama el gigante que pelio con David?", opciones: ["A. Goliat", "B. Sansón", "C. Saúl", "D. Filisteo"], correcta: 0 },
+            { pregunta: "¿Qué ciudad fue destruida junto con Sodoma?", opciones: ["A. Jericó", "B. Nínive", "C. Gomorra", "D. Babilonia"], correcta: 2 },
+            { pretunta: "¿Cuántas veces negó Pedro a Jesús antes de que cantara el gallo?", opciones: ["A. 1", "B. 2", "C. 3", "D. 4"], correcta: 2 }
         ];
 
         function irAlSiguienteNivel() {

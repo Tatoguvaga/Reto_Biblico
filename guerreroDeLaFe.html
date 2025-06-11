@@ -7,95 +7,6 @@
     <title>Guerrero de la Fé</title>
     <link rel="stylesheet" href="style.css" />
 
-    <style>
-        .container-pregunta {
-            background: #a23004;
-            color: white;
-            padding: 30px;
-            border-radius: 12px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .opciones {
-            margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .opciones button {
-            width: 400px;
-            display: block;
-            margin: 10px auto;
-            padding: 10px 20px;
-            font-size: 18px;
-            border-radius: 8px;
-            border: none;
-            cursor: pointer;
-        }
-
-        .correcta {
-            background-color: #4CAF50;
-            color: white;
-        }
-
-        .incorrecta {
-            background-color: #f44336;
-            color: white;
-        }
-
-        #modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-            z-index: 999;
-        }
-
-        #modalContent {
-            background: white;
-            color: black;
-            padding: 30px;
-            border-radius: 10px;
-            font-size: 32px;
-            font-weight: bold;
-        }
-
-        .modal-correcto {
-            color: green;
-        }
-
-        .modal-incorrecto {
-            color: red;
-        }
-
-        .barra-progreso {
-            margin: 20px auto;
-            width: 80%;
-            background-color: #ddd;
-            border-radius: 20px;
-            overflow: hidden;
-            height: 20px;
-        }
-
-        .barra-llenado {
-            height: 100%;
-            background-color: #4CAF50;
-            width: 0%;
-            transition: width 0.5s ease-in-out;
-        }
-
-        .nivel-texto {
-            margin-bottom: 10px;
-            font-size: 18px;
-            color: #333;
-        }
-    </style>
 </head>
 
 <body>
@@ -124,7 +35,34 @@
             { pregunta: "¿Qué rey construyó el primer templo en Jerusalén?", opciones: ["A. David", "B. Salomón", "C. Ezequías", "D. Josías"], correcta: 1 },
             { pregunta: "¿Qué profeta desafió a los profetas de Baal?", opciones: ["A. Elías", "B. Eliseo", "C. Isaías", "D. Jeremías"], correcta: 0 },
             { pregunta: "¿Qué hizo Jesús en la boda de Caná?", opciones: ["A. Sanó a un enfermo", "B. Resucitó a un muerto", "C. Multiplicó el vino", "D. Caminó sobre el agua"], correcta: 2 },
-
+            { pregunta: "¿Qué mujer escondió a los espías israelitas en Jericó?", opciones: ["A. Débora", "B. Ana", "C. Rut", "D. Rahab"], correcta: 3 },
+            { pregunta: "¿Quién fue el primer rey de Israel?", opciones: ["A. Saúl", "B. David", "C. Salomón", "D. Ezequías"], correcta: 0 },
+            { pregunta: "En qué libro de la Biblia encontramos los Diez Mandamientos por primera vez?", opciones: ["A. Números", "B. Levítico", "C. Éxodo", "D. Deuteronomio"], correcta: 2 },
+            { pregunta: "¿Qué discípulo era recaudador de impuestos antes de seguir a Jesús?", opciones: ["A. Pedro", "B. Mateo", "C. Juan", "D. Santiago"], correcta: 1 },
+            { pregunta: "¿Qué instrumento tocaba David para calmar a Saúl?", opciones: ["A. Tambor", "B. Flauta", "C. Arpa", "D. Lira"], correcta: 2 },
+            { pregunta: "¿Quién interpretó los sueños del faraón en Egipto?", opciones: ["A. Moisés", "B. Daniel", "C. José", "D. Samuel"], correcta: 2 },
+            { pregunta: "¿Quién fue la madre de Samuel?", opciones: ["A. Ana", "B. Sara", "C. Rebeca", "D. Raquel"], correcta: 0 },
+            { pregunta: "¿Qué rey persa permitió a los judíos regresar a Jerusalén?", opciones: ["A. Nabucodonosor", "B. Darío", "C. Artajerjes", "D. Ciro"], correcta: 3 },
+            { pregunta: "¿Quién fue el apóstol conocido como el 'discípulo amado'?", opciones: ["A. Pedro", "B. Juan", "C. Santiago", "D. Andrés"], correcta: 1 },
+            { pregunta: "¿Quién escribió la mayoría de las cartas del Nuevo Testamento?", opciones: ["A. Pedro", "B. Juan", "C. Pablo", "D. Santiago"], correcta: 2 },
+            { pregunta: "¿Dónde recibió Moisés los Diez Mandamientos?", opciones: ["A. Monte Sinaí", "B. Monte Ararat", "C. Monte Nebo", "D. Monte Hermón"], correcta: 0 },
+            { pregunta: "¿Quién fue la madre de Juan el Bautista?", opciones: ["A. María", "B. Elisabet", "C. Ana", "D. Sara"], correcta: 1 },
+            { pregunta: "¿Cuántos días y noches llovió durante el diluvio?", opciones: ["A. 20", "B. 30", "C. 40", "D. 50"], correcta: 2 },
+            { pregunta: "¿Qué libro de la Biblia se conoce por sus proverbios y sabiduría?", opciones: ["A. Salmos", "B. Proverbios", "C. Eclesiastés", "D. Job"], correcta: 1 },
+            { pregunta: "¿Cuál fue la señal del pacto entre Dios y Noé?", opciones: ["A. Arca", "B. Paloma", "C. Cordero", "D. Arco iris"], correcta: 3 },
+            { pregunta: "¿Quién dijo “He aquí la sierva del Señor; hágase conmigo conforme a tu palabra”?", opciones: ["A. Ana", "B. María", "C. Rebeca", "D. Sara"], correcta: 1 },
+            { pregunta: "¿Qué apóstol tuvo una visión de un lienzo que bajaba del cielo con animales?", opciones: ["A. Pablo", "B. Juan", "C. Pedro", "D. Felipe"], correcta: 2 },
+            { pregunta: "¿Qué hombre sabio resolvió una disputa entre dos mujeres por un bebé?", opciones: ["A. Salomón", "B. David", "C. Moisés", "D. Samuel"], correcta: 0 },
+            { pregunta: "¿Cuál fue la última plaga que Dios envió a Egipto?", opciones: ["A. Langostas", "B. Peste", "C. Muerte de los primogénitos", "D. Tinieblas"], correcta: 2 },
+            { pregunta: "¿Cuál es el primer libro del Nuevo Testamento?", opciones: ["A. Mateo", "B. Marcos", "C. Lucas", "D. Juan"], correcta: 0 },
+            { pregunta: "¿A qué profeta se le apareció Dios en una zarza ardiente?", opciones: ["A. Elías", "B. Moisés", "C. Jeremías", "D. Ezequiel"], correcta: 1 },
+            { pregunta: "¿Quién fue la mujer que se convirtió en sal por mirar atrás?", opciones: ["A. La esposa de Noé", "B. La esposa de José", "C. La esposa de Moisés", "D. La esposa de Lot"], correcta: 3 },
+            { pregunta: "¿Cuál de estos libros es considerado un libro profético?", opciones: ["A. Salmos", "B. Proverbios", "C. Ezequiel", "D. Génesis"], correcta: 2 },
+            { pregunta: "¿Qué discípulo dudó de la resurrección de Jesús hasta verlo?", opciones: ["A. Pedro", "B. Juan", "C. Tomás", "D. Andrés"], correcta: 2 },
+            { pregunta: "¿Quién escribió el libro de Lamentaciones?", opciones: ["A. Jeremías", "B. Isaías", "C. Ezequiel", "D. Daniel"], correcta: 0 },
+            { pregunta: "¿Qué mujer del Antiguo Testamento trabajó recogiendo espigas?", opciones: ["A. Lea", "B. Noemí", "C. Raquel", "D. Rut"], correcta: 3 },
+            { pregunta: "¿Quién fue el profeta que subió al cielo en un carro de fuego?", opciones: ["A. Eliseo", "B. Elías", "C. Isaías", "D. Jeremías"], correcta: 1 },
+            { pregunta: "¿Qué alimento les proveyó Dios a los israelitas en el desierto?", opciones: ["A. Pan", "B. Maná", "C. Carne", "D. Frutas"], correcta: 1 }
         ];
 
         function irAlSiguienteNivel() {
